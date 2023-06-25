@@ -8,9 +8,16 @@
     <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <nav>
+    <nav id="top">
       <div class="logo">
         <p class="logo_text"><span>P</span>aienobe</p>
+      </div>
+
+      <div class="menu_items_container">
+        <div class="closer">
+          <i class="fa fa-times-circle fa-2x" aria-hidden="true"></i>
+        </div>
+        <div class="options_list"></div>
       </div>
 
       <div class="menu_btn">
@@ -34,7 +41,7 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
       <h2>ABOUT ME</h2>
 
       <div class="face_holder">
@@ -43,17 +50,17 @@
       <p class="main_about_text">Welcome to my portfolio website! I am a frontend developer with over 2 years of coding experience, including professional work. I specialize in HTML, CSS, JavaScript, TypeScript, React, and Next.js. Currently studying mathematics at university, I combine logical thinking with creative problem-solving to craft dynamic and user-friendly web applications. I am dedicated to continuously expanding my professional experience and staying up-to-date with the latest industry trends. Let's collaborate and bring your ideas to life!</p>
     </section>
 
-    <section class="skills_section">
+    <section class="skills_section" id="skills_section">
       <h2>SKILLS</h2>
       <div class="skills_holder"></div>
     </section>
 
-    <section class="projects_section">
+    <section class="projects_section" id="projects_section">
       <h2>PROJECTS</h2>
       <div class="projects_holder"></div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <h2>GET IN <span>TOUCH</span></h2>
       <form action="https://formsubmit.co/paienobe@gmail.com" method="POST">
         <input type="text" placeholder="Full Name" name="sender_name" required />

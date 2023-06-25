@@ -1,5 +1,9 @@
 const skillsHolder = document.querySelector(".skills_holder");
 const projectsHolder = document.querySelector(".projects_holder");
+const menuContainer = document.querySelector(".menu_items_container");
+const menuOptionsContainer = document.querySelector(".options_list");
+const menuCloser = document.querySelector(".closer");
+const burgerMenu = document.querySelector(".menu_btn");
 
 const skillHolderItems = [
   { name: "HTML", image: "../assets/icons8-html.svg" },
@@ -21,6 +25,14 @@ const projects = [
   { name: "Invoice App", live_url: "https://invoice-app-gamma.vercel.app/", github: "https://github.com/Paienobe/invoice-app", thumbnail: "../assets/invoice-app.274f58a241b2f1c353b1.png", description: "A streamlined invoicing app designed to simplify and automate the billing process for businesses of all sizes." },
 ];
 
+const menuItems = [
+  { name: "Home", link: "#top" },
+  { name: "About", link: "#about" },
+  { name: "Skills", link: "#skills_section" },
+  { name: "Projects", link: "#projects_section" },
+  { name: "Contact", link: "#contact" },
+];
+
 skillHolderItems.forEach((item) => {
   skillsHolder.innerHTML += `<div class="skill_item"><img src=${item.image} alt=""/> <p>${item.name}</p></div>`;
 });
@@ -37,4 +49,24 @@ projects.forEach((item) => {
   </div>
   </div>
   </div>`;
+});
+
+menuItems.forEach((item) => {
+  menuOptionsContainer.innerHTML += `<a class="menu_item">${item.name}</a>`;
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  const menuOptions = document.querySelectorAll(".menu_item");
+  menuOptions.forEach((item, index) => {
+    item.addEventListener("click", () => {
+      window.open(`${menuItems[index].link}`, "_self");
+    });
+  });
+});
+
+burgerMenu.addEventListener("click", () => {
+  menuContainer.style.top = "0";
+});
+menuCloser.addEventListener("click", () => {
+  menuContainer.style.top = "-200%";
 });
