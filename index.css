@@ -63,7 +63,8 @@ nav {
   margin-top: 1rem;
 }
 
-.hero_buttons button {
+.hero_buttons button,
+.contact button {
   background-color: orangered;
   border: none;
   color: white;
@@ -82,7 +83,8 @@ nav {
 
 .about h2,
 .skills_section h2,
-.projects_section h2 {
+.projects_section h2,
+.contact h2 {
   text-decoration: underline;
   text-decoration-color: orangered;
   text-decoration-thickness: 4px;
@@ -191,4 +193,40 @@ nav {
   display: block;
   color: white;
   border-radius: 0.5rem;
+}
+
+.contact {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: rgba(217, 224, 236, 0.3);
+}
+
+.contact h2 span {
+  color: orangered;
+}
+
+.contact form {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: none;
+  font-size: 18px;
+}
+
+input:focus-within,
+textarea:focus-within {
+  outline: 2px solid orangered;
+}
+
+textarea {
+  resize: none;
 }
