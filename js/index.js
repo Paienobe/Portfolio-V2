@@ -4,6 +4,7 @@ const menuContainer = document.querySelector(".menu_items_container");
 const menuOptionsContainer = document.querySelector(".options_list");
 const menuCloser = document.querySelector(".closer");
 const burgerMenu = document.querySelector(".menu_btn");
+const nav = document.getElementById("top");
 
 const skillHolderItems = [
   { name: "HTML", image: "../assets/icons8-html.svg" },
@@ -26,7 +27,7 @@ const projects = [
 ];
 
 const menuItems = [
-  { name: "Home", link: "#top" },
+  { name: "Home", link: "#" },
   { name: "About", link: "#about" },
   { name: "Skills", link: "#skills_section" },
   { name: "Projects", link: "#projects_section" },
@@ -59,14 +60,30 @@ window.addEventListener("DOMContentLoaded", () => {
   const menuOptions = document.querySelectorAll(".menu_item");
   menuOptions.forEach((item, index) => {
     item.addEventListener("click", () => {
+      menuContainer.classList.remove("show_menu");
+      menuContainer.classList.add("hide_menu");
       window.open(`${menuItems[index].link}`, "_self");
     });
   });
 });
 
-burgerMenu.addEventListener("click", () => {
-  menuContainer.style.top = "0";
+window.addEventListener("scroll", () => {
+  const navHeight = nav.clientHeight;
+  const scrollHeight = window.scrollY;
+
+  if (scrollHeight > navHeight) {
+    nav.classList.add("sticky_nav");
+  } else {
+    nav.classList.remove("sticky_nav");
+  }
 });
+
+burgerMenu.addEventListener("click", () => {
+  menuContainer.classList.add("show_menu");
+  menuContainer.classList.remove("hide_menu");
+});
+
 menuCloser.addEventListener("click", () => {
-  menuContainer.style.top = "-200%";
+  menuContainer.classList.add("hide_menu");
+  menuContainer.classList.remove("show_menu");
 });
