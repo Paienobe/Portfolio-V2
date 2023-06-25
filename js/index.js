@@ -5,6 +5,7 @@ const menuOptionsContainer = document.querySelector(".options_list");
 const menuCloser = document.querySelector(".closer");
 const burgerMenu = document.querySelector(".menu_btn");
 const nav = document.getElementById("top");
+const logo = document.querySelector(".logo");
 
 const skillHolderItems = [
   { name: "HTML", image: "../assets/icons8-html.svg" },
@@ -86,4 +87,8 @@ burgerMenu.addEventListener("click", () => {
 menuCloser.addEventListener("click", () => {
   menuContainer.classList.add("hide_menu");
   menuContainer.classList.remove("show_menu");
+});
+
+logo.addEventListener("click", () => {
+  window.scrollTo(0, 0);
 });
