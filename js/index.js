@@ -1,4 +1,6 @@
 const skillsHolder = document.querySelector(".skills_holder");
+const projectsHolder = document.querySelector(".projects_holder");
+
 const skillHolderItems = [
   { name: "HTML", image: "../assets/icons8-html.svg" },
   { name: "CSS", image: "../assets/icons8-css.svg" },
@@ -12,7 +14,27 @@ const skillHolderItems = [
   { name: "JIRA", image: "../assets/icons8-jira.svg" },
 ];
 
-skillsHolder.innerHTML = "";
+const projects = [
+  { name: "Kanban Task Manager", live_url: "https://kanban-manager.vercel.app/", github: "https://github.com/Paienobe/Kanban-manager", thumbnail: "https://res.cloudinary.com/dz209s6jk/image/upload/f_auto,q_auto:good,w_900/Challenges/hlb8i2xkwhhdevpbx1jb.jpg", description: "An efficient and visual task management app that utilizes the Kanban method to help teams organize, track, and prioritize their workflow seamlessly." },
+  { name: "Product Feedback App", live_url: "http://product-feedback-app-seven.vercel.app/", github: "https://github.com/Paienobe/Product-feedback-app", thumbnail: "../assets/feedback_app.f012e3d5d23d35d316f8.png", description: "A user-friendly platform that allows customers to easily provide feedback on products, helping businesses enhance their offerings and improve customer satisfaction." },
+  { name: "Audiophile eCommerce", live_url: "https://audiophile-omega.vercel.app/", github: "https://github.com/Paienobe/Audiophile", thumbnail: "../assets/audiophile-home.404c1cc04180aab99635.png", description: "An intuitive eCommerce website that enables users to effortlessly browse, purchase their favorite audio devices." },
+  { name: "Invoice App", live_url: "https://invoice-app-gamma.vercel.app/", github: "https://github.com/Paienobe/invoice-app", thumbnail: "../assets/invoice-app.274f58a241b2f1c353b1.png", description: "A streamlined invoicing app designed to simplify and automate the billing process for businesses of all sizes." },
+];
+
 skillHolderItems.forEach((item) => {
   skillsHolder.innerHTML += `<div class="skill_item"><img src=${item.image} alt=""/> <p>${item.name}</p></div>`;
+});
+
+projects.forEach((item) => {
+  projectsHolder.innerHTML += `<div class="project_item">
+  <img src=${item.thumbnail} alt="project_image" >
+  <div class="project_details">
+  <h3>${item.name}</h3>
+  <p>${item.description}</p>
+  <div class="link_holder">
+  <a href=${item.live_url} target="_blank" class="project_links">Live Site</a>
+  <a href=${item.github} target="_blank" class="project_links">Github</a>
+  </div>
+  </div>
+  </div>`;
 });
