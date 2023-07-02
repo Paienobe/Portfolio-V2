@@ -7,6 +7,8 @@ const burgerMenu = document.querySelector(".menu_btn");
 const nav = document.getElementById("top");
 const logo = document.querySelector(".logo");
 
+document.documentElement.style.scrollPaddingTop = `${nav.clientHeight}px`;
+
 const skillHolderItems = [
   { name: "HTML", image: "../assets/icons8-html.svg" },
   { name: "CSS", image: "../assets/icons8-css.svg" },

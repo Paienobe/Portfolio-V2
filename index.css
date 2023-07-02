@@ -5,6 +5,7 @@
   margin: 0;
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
+  box-sizing: border-box;
   transition: all 0.25s ease-in-out;
 }
 
@@ -31,7 +32,8 @@ nav {
 }
 
 .sticky_nav {
-  position: fixed;
+  position: sticky;
+  top: 0;
   left: 0;
   right: 0;
   background-color: white;
