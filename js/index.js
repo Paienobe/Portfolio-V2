@@ -5,7 +5,9 @@ const menuOptionsContainer = document.querySelector(".options_list");
 const menuCloser = document.querySelector(".closer");
 const burgerMenu = document.querySelector(".menu_btn");
 const nav = document.getElementById("top");
+const header = document.querySelector(".header");
 const logo = document.querySelector(".logo");
+const contactBtn = document.querySelector(".contact_button");
 
 document.documentElement.style.scrollPaddingTop = `${nav.clientHeight}px`;
 
@@ -70,14 +72,18 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+contactBtn.addEventListener("click", () => {
+  window.open("#contact", "_self");
+});
+
 window.addEventListener("scroll", () => {
   const navHeight = nav.clientHeight;
   const scrollHeight = window.scrollY;
 
   if (scrollHeight > navHeight) {
-    nav.classList.add("sticky_nav");
+    header.classList.add("sticky_nav");
   } else {
-    nav.classList.remove("sticky_nav");
+    header.classList.remove("sticky_nav");
   }
 });
 

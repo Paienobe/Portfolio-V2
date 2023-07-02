@@ -278,6 +278,159 @@ textarea {
   resize: none;
 }
 
-footer {
-  background-color: orangered;
+.socials {
+  margin-top: 1.5rem;
+}
+
+.fa-linkedin-square,
+.fa-twitter-square,
+.fa-github-square {
+  color: orangered;
+}
+
+@media (min-width: 640px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .hero_image_holder {
+    width: 40%;
+  }
+
+  .hero_text {
+    width: 50%;
+  }
+
+  .about_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
+
+  .face_holder {
+    width: 35%;
+    margin: 0;
+  }
+
+  .face_holder img {
+    height: 270px;
+  }
+
+  .about_text_parent {
+    width: 50%;
+  }
+
+  .main_about_text {
+    width: 100%;
+    text-align: left;
+  }
+
+  .socials {
+    width: fit-content;
+  }
+
+  .skills_holder {
+    width: calc(112.5px * 5 + 10px);
+  }
+
+  .projects_holder {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .project_item {
+    width: 45%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    background-color: white;
+  }
+
+  nav {
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  .hero_buttons button:hover,
+  .link_holder a:hover {
+    cursor: pointer;
+    background-color: rgb(247, 96, 41);
+  }
+
+  .menu_items_container {
+    position: static;
+    opacity: 1;
+  }
+
+  .closer {
+    display: none;
+  }
+
+  .options_list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .menu_item:hover {
+    color: orangered;
+    cursor: pointer;
+  }
+
+  .menu_items_container {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .menu_item {
+    padding: 0;
+  }
+
+  .menu_btn {
+    display: none;
+  }
+
+  .hero {
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  .about_main {
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+  }
+
+  .face_holder {
+    max-height: 350px;
+  }
+
+  .face_holder img {
+    height: 350px;
+  }
+
+  .projects_holder {
+    width: 90%;
+    max-width: 1280px;
+    margin: auto;
+    margin-top: 3rem;
+  }
+
+  .project_item {
+    width: 40%;
+  }
+
+  .contact form {
+    max-width: 650px;
+    margin: 3rem auto;
+  }
 }
