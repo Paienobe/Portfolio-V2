@@ -107,7 +107,8 @@ nav {
 }
 
 .hero_buttons button,
-.contact button {
+.contact button,
+.hero_buttons a {
   background-color: orangered;
   border: none;
   color: white;
