@@ -19,6 +19,7 @@ const skillHolderItems = [
   { name: "REACT", image: "../assets/icons8-react.svg" },
   { name: "NEXT", image: "../assets/next-js.svg" },
   { name: "TAILWIND", image: "../assets/icons8-tailwind-css.svg" },
+  { name: "SASS", image: "../assets/icons8-sass.svg" },
   { name: "VSCODE", image: "../assets/icons8-visual-studio-code-2019.svg" },
   { name: "GIT", image: "../assets/icons8-git.svg" },
   { name: "JIRA", image: "../assets/icons8-jira.svg" },
