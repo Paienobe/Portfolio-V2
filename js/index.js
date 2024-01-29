@@ -18,6 +18,8 @@ const skillHolderItems = [
   { name: "TYPESCRIPT", image: "../assets/icons8-typescript.svg" },
   { name: "REACT", image: "../assets/icons8-react.svg" },
   { name: "NEXT", image: "../assets/next-js.svg" },
+  { name: "GO", image: "../assets/golang-1.svg" },
+  { name: "POSTGRESQL", image: "../assets/icons8-postgresql.svg" },
   { name: "TAILWIND", image: "../assets/icons8-tailwind-css.svg" },
   { name: "SASS", image: "../assets/icons8-sass.svg" },
   { name: "VSCODE", image: "../assets/icons8-visual-studio-code-2019.svg" },
